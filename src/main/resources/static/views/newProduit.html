@@ -1,0 +1,57 @@
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="..\node_modules\bootstrap\dist\css\bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="..\css\myStyle.css">
+<title>Catalogue</title>
+</head>
+<div class="container spacer">
+
+<div class="panel-default" ng-if="mode==0">
+<div class="panel-heading">La saisie d'un produit</div>
+<div class="panel-body">
+<form action="">
+<div class="form-group">
+<label class="control-label">Désignation</label>
+<input class="form-control" type="text" ng-model="produit.designation">
+</div>
+<div class="form-group">
+<label class="control-label">Prix</label>
+<input class="form-control" type="text" ng-model="produit.prix">
+</div>
+<div class="form-group">
+<label class="control-label">Quantité</label>
+<input class="form-control" type="text" ng-model="produit.quantite">
+</div>
+
+<div>
+<button class="btn-primary" ng-click="saveProduit()" >save</button>
+</div>
+</form>
+</div>
+</div>
+<div class="panel-default" ng-if="mode==1">
+<div class="panel-heading">La confirmation <a ng-click="modeForm()">newProduit</a></div>
+<div class="panel-body">
+<div class="form-group">
+<label class="control-label">ID</label>
+<label>{{produit.id}}</label>
+</div>
+<div class="form-group">
+<label class="control-label">Désignation</label>
+<label>{{produit.designation}}</label>
+</div>
+<div class="form-group">
+<label class="control-label">Prix</label>
+<label>{{produit.prix}}</label>
+</div>
+<div class="form-group">
+<label class="control-label">Quantité</label>
+<label>{{produit.quantite}}</label>
+</div>
+</div>
+
+</div>
+
+</div>
